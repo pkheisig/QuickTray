@@ -22,7 +22,9 @@ swiftc $SOURCES -o "$APP_BUNDLE/Contents/MacOS/$APP_NAME" -target $ARCH-apple-ma
 echo "Copying Resources..."
 cp Info.plist "$APP_BUNDLE/Contents/Info.plist"
 
-# If we had an icon:
-# cp Resources/AppIcon.icns "$APP_BUNDLE/Contents/Resources/" 2>/dev/null || true
+# Copy Icon
+if [ -f "Resources/AppIcon.icns" ]; then
+    cp Resources/AppIcon.icns "$APP_BUNDLE/Contents/Resources/"
+fi
 
 echo "Done! App is at $APP_BUNDLE"
