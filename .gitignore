@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+*.xcodeproj
+*.xcworkspace
+*.xcuserdatad
+*.xccheckout
+*.moved-aside
+*.derivedData
+*.hmap
+*.ipa
+*.pkg
+
+# Swift Package Manager
+.build/
+
+# QuickTray specific
+items.json
